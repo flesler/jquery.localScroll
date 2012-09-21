@@ -24,8 +24,8 @@
  *	- The hash of settings, is passed to jQuery.ScrollTo, so the settings are valid for that plugin as well.
  *	- jQuery.localScroll can be used if the desired links, are all over the document, it accepts the same settings.
  *  - If the setting 'lazy' is set to true, then the binding will still work for later added anchors.
-  *	- If onBefore returns false, the event is ignored.
- **/
+ *	- If onBefore returns false, the event is ignored.
+ */
 ;(function( $ ){
 	var URI = location.href.replace(/#.*/,''); // local url without hash
 
