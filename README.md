@@ -1,4 +1,13 @@
-jQuery.LocalScroll 
+# jQuery.LocalScroll
+
+### Installation and usage
+
+Using [bower](https://github.com/twitter/bower):
+```bash
+bower install jquery.localScroll
+```
+
+### Notes
 
 * Requires jQuery.ScrollTo (http://github.com/flesler/jquery.scrollTo)
 
