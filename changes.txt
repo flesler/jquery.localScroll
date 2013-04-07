@@ -1,3 +1,7 @@
+1.2.9b
+[Fix]
+- hash:true incompatible with vertical offset
+
 1.2.8
 [Fix]
 - The setting 'stop' wasn't working on window.

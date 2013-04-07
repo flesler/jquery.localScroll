@@ -4,24 +4,7 @@
  * Dual licensed under MIT and GPL.
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.2.8
- *
- * @id jQuery.fn.localScroll
- * @param {Object} settings Hash of settings, it is passed in to jQuery.ScrollTo, none is required.
- * @return {jQuery} Returns the same jQuery object, for chaining.
- *
- * @example $('ul.links').localScroll();
- *
- * @example $('ul.links').localScroll({ filter:'.animated', duration:400, axis:'x' });
- *
- * @example $.localScroll({ target:'#pane', axis:'xy', queue:true, event:'mouseover' });
- *
- * Notes:
- *	- The plugin requires jQuery.ScrollTo.
- *	- The hash of settings, is passed to jQuery.ScrollTo, so the settings are valid for that plugin as well.
- *	- jQuery.localScroll can be used if the desired links, are all over the document, it accepts the same settings.
- *  - If the setting 'lazy' is set to true, then the binding will still work for later added anchors.
- *	- If onBefore returns false, the event is ignored.
+ * @version 1.2.9b
  */
 ;(function( $ ){
 	var URI = location.href.replace(/#.*/,''); // local url without hash
@@ -108,10 +91,12 @@
 			$target._scrollable().stop(true); // remove all its animations
 
 		if( settings.hash ){
+			var offset = settings.offset;
+			offset = offset && offset.top || offset || 0;
 			var attr = elem.id == id ? 'id' : 'name',
 				$a = $('<a> </a>').attr(attr, id).css({
 					position:'absolute',
-					top: $(window).scrollTop(),
+					top: $(window).scrollTop() + offset,
 					left: $(window).scrollLeft()
 				});
 
