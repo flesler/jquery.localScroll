@@ -31,24 +31,13 @@
 		*/
 	};
 
-	// If the URL contains a hash, it will scroll to the pointed element
-	$localScroll.hash = function( settings ){
-		if( location.hash ){
-			settings = $.extend( {}, $localScroll.defaults, settings );
-			settings.hash = false; // can't be true
-			
-			if( settings.reset ){
-				var d = settings.duration;
-				delete settings.duration;
-				$(settings.target).scrollTo( 0, settings );
-				settings.duration = d;
-			}
-			scroll( 0, location, settings );
-		}
-	};
-
 	$.fn.localScroll = function( settings ){
 		settings = $.extend( {}, $localScroll.defaults, settings );
+
+		if (settings.hash && location.hash) {
+			if (settings.target) window.scrollTo(0, 0);
+			scroll(0, location, settings);
+		}
 
 		return settings.lazy ?
 			// use event delegation, more links can be added later.		
@@ -70,6 +59,9 @@
 			return !!this.href && !!this.hash && this.href.replace(this.hash,'') == URI && (!settings.filter || $(this).is( settings.filter ));
 		};
 	};
+
+	// Not needed anymore, kept for backwards compatibility
+	$localScroll.hash = function() {}
 
 	function scroll( e, link, settings ){
 		var id = link.hash.slice(1),
