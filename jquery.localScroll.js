@@ -1,13 +1,10 @@
 /*!
  * jQuery.LocalScroll
- * Copyright (c) 2007-2010 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Copyright (c) 2007-2013 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
  * Dual licensed under MIT and GPL.
- * Date: 05/31/2010
- *
- * @projectDescription Animated scrolling navigation, using anchors.
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.2.8b
+ * @version 1.2.8
  *
  * @id jQuery.fn.localScroll
  * @param {Object} settings Hash of settings, it is passed in to jQuery.ScrollTo, none is required.

@@ -1,3 +1,4 @@
+1.2.8
 [Fix]
 - The setting 'stop' wasn't working on window.
 
