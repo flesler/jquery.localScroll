@@ -4,7 +4,7 @@
  * Dual licensed under MIT and GPL.
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.2.9b
+ * @version 1.2.9
  */
 ;(function( $ ){
 	var URI = location.href.replace(/#.*/,''); // local url without hash
@@ -21,8 +21,7 @@
 		axis:'y', // Which of top and left should be modified.
 		event:'click', // On which event to react.
 		stop:true, // Avoid queuing animations 
-		target: window, // What to scroll (selector or element). The whole window by default.
-		reset: true // Used by $.localScroll.hash. If true, elements' scroll is resetted before actual scrolling
+		target: window // What to scroll (selector or element). The whole window by default.
 		/*
 		lock:false, // ignore events if already animating
 		lazy:false, // if true, links can be added later, and will still work.
@@ -82,7 +81,7 @@
 		if( settings.stop )
 			$target._scrollable().stop(true); // remove all its animations
 
-		if( settings.hash ){
+		if( settings.hash ) {
 			var offset = settings.offset;
 			offset = offset && offset.top || offset || 0;
 			var attr = elem.id == id ? 'id' : 'name',
