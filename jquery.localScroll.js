@@ -4,7 +4,7 @@
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.3.0
+ * @version 1.3.1
  */
 ;(function( $ ){
 	var URI = location.href.replace(/#.*/,''); // local url without hash
