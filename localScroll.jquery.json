@@ -24,6 +24,7 @@
 	"download": "https://github.com/flesler/jquery.localScroll/releases",
 	"demo": "http://demos.flesler.com/jquery/localScroll",
 	"dependencies": {
-		"jquery": ">=1.8"
+		"jquery": ">=1.8",
+		"scrollTo": ">=1.4.3"
 	}
 }
