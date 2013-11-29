@@ -1,10 +1,10 @@
 /*!
- * jQuery.LocalScroll
+ * jQuery.localScroll
  * Copyright (c) 2007-2013 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
- * Dual licensed under MIT and GPL.
+ * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.2.9
+ * @version 1.3.0
  */
 ;(function( $ ){
 	var URI = location.href.replace(/#.*/,''); // local url without hash

@@ -1,3 +1,8 @@
+1.3.0
+[Misc]
+- Changed licensing to MIT
+- Repo is compliant with official jquery plugins repository
+
 1.2.9
 [Fix]
 - hash:true incompatible with vertical offset
