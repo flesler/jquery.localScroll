@@ -85,7 +85,7 @@
 			var offset = settings.offset;
 			offset = offset && offset.top || offset || 0;
 			var attr = elem.id == id ? 'id' : 'name',
-				$a = $('<a> </a>').attr(attr, id).css({
+				$a = $(document.createElement('a')).attr(attr, id).css({
 					position:'absolute',
 					top: $(window).scrollTop() + offset,
 					left: $(window).scrollLeft()
@@ -93,7 +93,7 @@
 
 			elem[attr] = '';
 			$('body').prepend($a);
-			location = link.hash;
+			location.hash = link.hash;
 			$a.remove();
 			elem[attr] = id;
 		}
