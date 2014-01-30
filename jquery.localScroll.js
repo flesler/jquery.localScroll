@@ -93,7 +93,7 @@
 
 			elem[attr] = '';
 			$('body').prepend($a);
-			location = link.hash;
+			location.hash = link.hash;
 			$a.remove();
 			elem[attr] = id;
 		}
