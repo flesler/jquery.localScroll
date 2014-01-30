@@ -4,9 +4,16 @@
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.3.2
+ * @version 1.3.3
  */
-;(function($) {
+ ;(function(plugin) {
+    // AMD Support
+    if (typeof define === 'function' && define.amd) {
+        define('jquery.localScroll', ['jquery', 'jquery.scrollTo'], plugin);
+    } else {
+        plugin(jQuery);
+    }
+}(function($) {
 	var URI = location.href.replace(/#.*/, ''); // local url without hash
 
 	var $localScroll = $.localScroll = function(settings) {
@@ -101,4 +108,7 @@
 			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change
 	};
 
-})(jQuery);
+	// AMD requirement
+	return $localScroll;
+
+}));
