@@ -1,3 +1,10 @@
+1.3.2
+[Fix]
+- Removed unneeded offset when hash setting is true
+[Misc]
+- Changed location to location.hash
+- Renamed component.json to bower.json and updated it
+
 1.3.1
 [Misc]
 - Re-releasing for the jQuery plugins site
