@@ -4,12 +4,12 @@
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.3.3
+ * @version 1.3.4
  */
  ;(function(plugin) {
     // AMD Support
     if (typeof define === 'function' && define.amd) {
-        define('jquery.localScroll', ['jquery', 'jquery.scrollTo'], plugin);
+        define(['jquery'], plugin);
     } else {
         plugin(jQuery);
     }
