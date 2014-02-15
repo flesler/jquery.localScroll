@@ -4,7 +4,7 @@
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.3.4
+ * @version 1.3.5
  */
  ;(function(plugin) {
     // AMD Support
@@ -47,12 +47,10 @@
 
 		return settings.lazy ?
 			// use event delegation, more links can be added later.		
-			this.bind(settings.event, function(e) {
-				// Could use closest(), but that would leave out jQuery -1.3.x
-				var a = $([e.target, e.target.parentNode]).filter(filter)[0];
-				// if a valid link was clicked
-				if (a)
-					scroll(e, a, settings); // do scroll.
+			this.on(settings.event, 'a,area', function(e) {
+				if (filter.call(this)) {
+					scroll(e, this, settings); 
+				}
 			}) :
 			// bind concretely, to each matching link
 			this.find('a,area')

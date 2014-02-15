@@ -1,3 +1,7 @@
+1.3.5
+[Fix]
+- Fixed when lazy true, links with 2+ levels of nested elements won't work, now using $().on()
+
 1.3.4
 [Misc]
 - Turned into an unnamed AMD module and drop explicit requirement for jquery.scrollTo
