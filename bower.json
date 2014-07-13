@@ -4,8 +4,7 @@
   "description": "Animated anchor navigation made easy.",
   "homepage": "https://github.com/flesler/jquery.localScroll",
   "main": [
-    "./jquery.localScroll.js",
-    "./jquery.localScroll.min.js"
+    "./jquery.localScroll.js"
   ],
   "dependencies": {
     "jquery": ">=1.8",
