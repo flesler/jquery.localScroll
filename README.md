@@ -1,5 +1,7 @@
 # jQuery.localScroll
 
+Animated anchor navigation made easy with jQuery
+
 ### Installation and usage
 
 Via [bower](https://github.com/flesler/jquery.localScroll/blob/master/bower.json):
@@ -11,9 +13,20 @@ Via [npm](https://www.npmjs.com/package/jquery.localscroll):
 npm install jquery.localscroll
 ```
 
+### Using a public CDN
+
+CDN provided by [jsdelivr](http://www.jsdelivr.com/#!jquery.localscroll)
+```html
+<script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+```
+CDN provided by [cdnjs](https://cdnjs.com/libraries/jquery-localScroll) (outdated)
+```html
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
+```
+
 ### Downloading Manually
 
-If you want the latest stable version, get the latest release from the [releases page](https://github.com/flesler/jquery.localScroll/releases).
+You can get the latest stable version from the [releases page](https://github.com/flesler/jquery.localScroll/releases).
 
 ### jQuery.scrollTo
 
