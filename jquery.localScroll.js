@@ -1,10 +1,10 @@
 /*!
  * jQuery.localScroll
- * Copyright (c) 2007-2014 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
+ * Copyright (c) 2007-2015 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.3.5
+ * @version 1.4.0
  */
  ;(function(plugin) {
     // AMD Support
@@ -60,8 +60,8 @@
 			.end();
 
 		function filter() {// is this a link that points to an anchor and passes a possible filter ? href is checked to avoid a bug in FF.
-			return !!this.href && !!this.hash && this.href.replace(this.hash,'') == URI && (!settings.filter || $(this).is(settings.filter));
-		};
+			return !!this.href && !!this.hash && this.href.replace(this.hash,'') === URI && (!settings.filter || $(this).is(settings.filter));
+		}
 	};
 
 	// Not needed anymore, kept for backwards compatibility
@@ -71,11 +71,9 @@
 		var id = link.hash.slice(1),
 			elem = document.getElementById(id) || document.getElementsByName(id)[0];
 
-		if (!elem)
-			return;
+		if (!elem) return;
 
-		if (e)
-			e.preventDefault();
+		if (e) e.preventDefault();
 
 		var $target = $(settings.target);
 
@@ -83,8 +81,9 @@
 			settings.onBefore && settings.onBefore(e, elem, $target) === false) 
 			return;
 
-		if (settings.stop)
-			$target._scrollable().stop(true); // remove all its animations
+		if (settings.stop) {
+			$target.stop(true); // remove all its animations
+		}
 
 		if (settings.hash) {
 			var attr = elem.id === id ? 'id' : 'name',
@@ -104,7 +103,7 @@
 		$target
 			.scrollTo(elem, settings) // do scroll
 			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change
-	};
+	}
 
 	// AMD requirement
 	return $localScroll;

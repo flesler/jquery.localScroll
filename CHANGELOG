@@ -1,3 +1,7 @@
+1.4.0
+[Compat]
+- Updated so it works with jQuery.scrollTo 2.0
+
 1.3.5
 [Fix]
 - Fixed when lazy true, links with 2+ levels of nested elements won't work, now using $().on()
