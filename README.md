@@ -2,9 +2,13 @@
 
 ### Installation and usage
 
-Using [bower](https://github.com/twitter/bower):
+Via [bower](https://github.com/flesler/jquery.localScroll/blob/master/bower.json):
 ```bash
 bower install jquery.localScroll
+```
+Via [npm](https://www.npmjs.com/package/jquery.localscroll):
+```bash
+npm install jquery.localscroll
 ```
 
 ### Downloading Manually
