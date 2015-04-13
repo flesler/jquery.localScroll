@@ -7,12 +7,12 @@
  * @version 1.4.0
  */
  ;(function(plugin) {
-    // AMD Support
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery'], plugin);
-    } else {
-        plugin(jQuery);
-    }
+	// AMD Support
+	if (typeof define === 'function' && define.amd) {
+		define(['jquery'], plugin);
+	} else {
+		plugin(jQuery);
+	}
 }(function($) {
 	var URI = location.href.replace(/#.*/, ''); // local url without hash
 
@@ -28,7 +28,8 @@
 		axis: 'y', // Which of top and left should be modified.
 		event: 'click', // On which event to react.
 		stop: true, // Avoid queuing animations 
-		target: window // What to scroll (selector or element). The whole window by default.
+		target: window, // What to scroll (selector or element). The whole window by default.
+		namespace: 'scroll', //
 		/*
 		lock: false, // ignore events if already animating
 		lazy: false, // if true, links can be added later, and will still work.
@@ -46,16 +47,18 @@
 		}
 
 		return settings.lazy ?
-			// use event delegation, more links can be added later.		
+			// use event delegation, more links can be added later.
 			this.on(settings.event, 'a,area', function(e) {
 				if (filter.call(this)) {
-					scroll(e, this, settings); 
+					console.log($(this).data());
+					scroll(e, this, $.extend(settings, $(this).data(settings.namespace))); 
 				}
 			}) :
 			// bind concretely, to each matching link
 			this.find('a,area')
 				.filter(filter).bind(settings.event, function(e) {
-					scroll(e, this, settings);
+					console.log($(this).data());
+					scroll(e, this, $.extend(settings, $(this).data(settings.namespace)));
 				}).end()
 			.end();
 
@@ -99,7 +102,7 @@
 			$a.remove();
 			elem[attr] = id;
 		}
-			
+		console.log(settings);
 		$target
 			.scrollTo(elem, settings) // do scroll
 			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change
