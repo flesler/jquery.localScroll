@@ -102,7 +102,7 @@
 			$a.remove();
 			elem[attr] = id;
 		}
-		console.log(settings);
+		
 		$target
 			.scrollTo(elem, settings) // do scroll
 			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change
