@@ -33,7 +33,8 @@
 		lock: false, // ignore events if already animating
 		lazy: false, // if true, links can be added later, and will still work.
 		filter: null, // filter some anchors out of the matched elements.
-		hash: false // if true, the hash of the selected link, will appear on the address bar.
+		hash: false, // if true, the hash of the selected link, will appear on the address bar.
+		onBefore: null // called before scrolling, "this" contains the settings and gets 3 arguments
 		*/
 	};
 
