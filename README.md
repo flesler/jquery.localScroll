@@ -2,6 +2,10 @@
 
 Animated anchor navigation made easy with jQuery
 
+### Demo
+
+You can check the [demo](http://demos.flesler.com/jquery/localScroll/) to see the plugin in action.
+
 ### Installation and usage
 
 Via [bower](https://github.com/flesler/jquery.localScroll/blob/master/bower.json):
