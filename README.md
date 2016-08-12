@@ -32,6 +32,10 @@ CDN provided by [cdnjs](https://cdnjs.com/libraries/jquery-localScroll) (outdate
 
 You can get the latest stable version from the [releases page](https://github.com/flesler/jquery.localScroll/releases).
 
+### Demo
+
+You can see the plugin in a (somewhat precarious) [demo page](http://demos.flesler.com/jquery/localScroll/).
+
 ### jQuery.scrollTo
 
 This plugin requires [jQuery.scrollTo](http://github.com/flesler/jquery.scrollTo).
