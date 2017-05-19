@@ -28,7 +28,8 @@
 		axis: 'y', // Which of top and left should be modified.
 		event: 'click', // On which event to react.
 		stop: true, // Avoid queuing animations 
-		target: window // What to scroll (selector or element). The whole window by default.
+		target: window, // What to scroll (selector or element). The whole window by default.
+		autoscroll: true // If true, applies the scrolling at initial page load.
 		/*
 		lock: false, // ignore events if already animating
 		lazy: false, // if true, links can be added later, and will still work.
@@ -41,7 +42,7 @@
 	$.fn.localScroll = function(settings) {
 		settings = $.extend({}, $localScroll.defaults, settings);
 
-		if (settings.hash && location.hash) {
+		if (settings.autoscroll && settings.hash && location.hash) {
 			if (settings.target) window.scrollTo(0, 0);
 			scroll(0, location, settings);
 		}
