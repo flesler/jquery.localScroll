@@ -7,7 +7,7 @@
 		"name": "Ariel Flesler",
 		"url": "http://flesler.blogspot.com"
 	},
-	"licenses": "MIT",
+	"license": "MIT",
 	"homepage": "https://github.com/flesler/jquery.localScroll",
 	"docs": "http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html",
 	"bugs": "https://github.com/flesler/jquery.localScroll/issues",
