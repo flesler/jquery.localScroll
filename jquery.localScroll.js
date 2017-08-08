@@ -1,18 +1,18 @@
 /*!
  * jQuery.localScroll
- * Copyright (c) 2007-2015 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
+ * Copyright (c) 2007 Ariel Flesler - aflesler<a>gmail<d>com | https://github.com/flesler
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.4.0
+ * @version 1.5.0
  */
- ;(function(plugin) {
-    // AMD Support
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery'], plugin);
-    } else {
-        plugin(jQuery);
-    }
+;(function(plugin) {
+	// AMD Support
+	if (typeof define === 'function' && define.amd) {
+		define(['jquery'], plugin);
+	} else {
+		plugin(jQuery);
+	}
 }(function($) {
 	var URI = location.href.replace(/#.*/, ''); // local url without hash
 
@@ -27,7 +27,7 @@
 		duration: 1000, // How long to animate.
 		axis: 'y', // Which of top and left should be modified.
 		event: 'click', // On which event to react.
-		stop: true, // Avoid queuing animations 
+		stop: true, // Avoid queuing animations
 		target: window, // What to scroll (selector or element). The whole window by default.
 		autoscroll: true // If true, applies the scrolling at initial page load.
 		/*
@@ -48,10 +48,10 @@
 		}
 
 		return settings.lazy ?
-			// use event delegation, more links can be added later.		
+			// use event delegation, more links can be added later.
 			this.on(settings.event, 'a,area', function(e) {
 				if (filter.call(this)) {
-					scroll(e, this, settings); 
+					scroll(e, this, settings);
 				}
 			}) :
 			// bind concretely, to each matching link
@@ -80,7 +80,7 @@
 		var $target = $(settings.target);
 
 		if (settings.lock && $target.is(':animated') ||
-			settings.onBefore && settings.onBefore(e, elem, $target) === false) 
+			settings.onBefore && settings.onBefore(e, elem, $target) === false)
 			return;
 
 		if (settings.stop) {
@@ -101,7 +101,7 @@
 			$a.remove();
 			elem[attr] = id;
 		}
-			
+
 		$target
 			.scrollTo(elem, settings) // do scroll
 			.trigger('notify.serialScroll',[elem]); // notify serialScroll about this change

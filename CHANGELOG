@@ -1,3 +1,10 @@
+1.5.0
+[Enhancement]
+- Auto-scroll on page load can be prevented by using `autoscroll: false`
+[Misc]
+- Updated homepage to my Github's user URL
+- Fixed some whitespaces
+
 1.4.0
 [Compat]
 - Updated so it works with jQuery.scrollTo 2.0
