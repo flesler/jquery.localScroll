@@ -1,6 +1,6 @@
 {
 	"name": "jquery.localscroll",
-	"version": "1.5.0",
+	"version": "2.0.0",
 	"description": "Animated anchor navigation made easy with jQuery",
 	"main": "jquery.localScroll.js",
 	"author": {

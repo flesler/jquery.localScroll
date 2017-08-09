@@ -4,7 +4,7 @@
  * Licensed under MIT
  * http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html
  * @author Ariel Flesler
- * @version 1.5.0
+ * @version 2.0.0
  */
 ;(function(plugin) {
 	// AMD Support

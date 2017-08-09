@@ -1,3 +1,7 @@
+2.0.0
+[Change]
+- require jQuery as a peerDependency
+
 1.5.0
 [Enhancement]
 - Auto-scroll on page load can be prevented by using `autoscroll: false`
