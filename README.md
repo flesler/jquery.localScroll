@@ -21,7 +21,7 @@ npm install jquery.localscroll
 
 CDN provided by [jsdelivr](http://www.jsdelivr.com/#!jquery.localscroll)
 ```html
-<script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
 ```
 CDN provided by [cdnjs](https://cdnjs.com/libraries/jquery-localScroll) (outdated)
 ```html
